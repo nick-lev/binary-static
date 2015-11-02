@@ -19,12 +19,6 @@
     h1 {
         text-align: center;
     }
-    input, button, select {
-        height: 3rem !important;
-    }
-    a.button {
-        padding: 0.75rem 1rem !important;
-    }
     #logo {
         width: auto;
     }
@@ -105,12 +99,12 @@
         padding-left: .5em;
         padding-right: .5em;
     }
-    .row {
-        flex-direction: column;
-        * {
-            margin-bottom: 1rem;
-        }
-    }
+    // .row {
+    //     flex-direction: column;
+    //     * {
+    //         margin-bottom: 1rem;
+    //     }
+    // }
     ul[role=tabs], ul[role=segmented] {
         flex-direction: column;
     }
