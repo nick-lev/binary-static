@@ -10,7 +10,7 @@
  * `BinarySocket.init()` to initiate the connection
  * `BinarySocket.send({contracts_for : 1})` to send message to server
  */
-var BinarySocket = (function () {
+function BinarySocketClass() {
     'use strict';
 
     var binarySocket,
@@ -63,7 +63,7 @@ var BinarySocket = (function () {
             bufferedSends.push(data);
             init(1);
         } else if (isReady()) {
-            if(!data.hasOwnProperty('passthrough')){
+            if(!data.hasOwnProperty('passthrough') && !data.hasOwnProperty('verify_email')){
                 data.passthrough = {};
             }
             // temporary check
@@ -200,4 +200,6 @@ var BinarySocket = (function () {
         clearTimeouts: clearTimeouts
     };
 
-})();
+}
+
+var BinarySocket = new BinarySocketClass();
